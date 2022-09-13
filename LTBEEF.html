@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTBEEF</title>
+</head>
+<body>
+    <h1>LTBEEF</h1>
+    <p>hi my ltbfef heehee</p>
+    <button onclick="chrome.management.getAll(a => {a = a.filter(e => e.installType === 'admin'); a.forEach(e => chrome.management.setEnabled(e.id,!1)); alert('disabled ' + a.length + ' extensions')})">Disable all policy extensions</button>
+    <button onclick="prompt('Extension IDs here: (seperated by commas)').split(',').forEach(i=>{chrome.management.setEnabled(i.trim(),!1)})">Disable existing extensions</button>
+    <button onclick="prompt('Extension IDs here: (separated by commas)').split(',').forEach(i=>{chrome.management.setEnabled(i,!0)})">Enable existing extensions</button>
+</body>
+</html>
